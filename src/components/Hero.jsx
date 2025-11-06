@@ -16,9 +16,14 @@ const Hero = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const heroWrapperStyle = {
+    ...styles.heroWrapper,
+    padding: isMobile ? '0 20px' : '0 40px',
+  };
+
   const heroStyle = {
     ...styles.hero,
-    paddingTop: isMobile ? '100px' : '80px',
+    paddingTop: isMobile ? '120px' : '80px',
   };
 
   const heroContainerStyle = {
@@ -34,7 +39,7 @@ const Hero = () => {
 
   return (
     <section id="inicio" style={heroStyle}>
-      <div style={styles.heroWrapper}>
+      <div style={heroWrapperStyle}>
         <div className="hero-container" style={heroContainerStyle}>
           <div style={styles.heroContent}>
             <div style={styles.logoContainer}>
