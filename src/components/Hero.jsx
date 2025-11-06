@@ -20,10 +20,10 @@ const Hero = () => {
               digestiva y fortalece tu bienestar.
             </p>
             <div style={styles.heroButtons}>
-              <a href="#producto" className="btn btn-primary" style={styles.btnPrimary}>
+              <a href="#producto" style={styles.btnPrimary}>
                 Conoce más
               </a>
-              <a href="#ubicacion" className="btn btn-secondary" style={styles.btnSecondary}>
+              <a href="#ubicacion" style={styles.btnSecondary}>
                 📍 Encuéntranos
               </a>
             </div>
@@ -59,6 +59,7 @@ const Hero = () => {
   );
 };
 
+// ---- ESTILOS RESPONSIVE ----
 const styles = {
   hero: {
     background: 'linear-gradient(135deg, #EBF4FF 0%, #ffffff 100%)',
@@ -68,16 +69,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    width: '100vw',
+    width: '100%',
     overflow: 'hidden',
-    margin: 0,
-    marginLeft: 0,
-    marginRight: 0,
-    position: 'relative',
-    left: '50%',
-    right: '50%',
-    marginLeft: '-50vw',
-    marginRight: '-50vw',
   },
   heroWrapper: {
     width: '100%',
@@ -90,105 +83,142 @@ const styles = {
     gridTemplateColumns: '1.1fr 0.9fr',
     gap: '40px',
     alignItems: 'center',
-    width: '100%',
-    margin: 0,
   },
   heroContent: {
     maxWidth: '100%',
-    margin: 0,
   },
   logoContainer: {
     marginBottom: '32px',
+    textAlign: 'center',
   },
   logoImage: {
     maxWidth: '520px',
     width: '100%',
     height: 'auto',
-    display: 'block',
   },
   heroDescription: {
     fontSize: '1.2rem',
     color: '#64748b',
     lineHeight: '1.8',
     marginBottom: '32px',
-    marginTop: 0,
+    textAlign: 'justify',
   },
   heroButtons: {
     display: 'flex',
     gap: '20px',
     flexWrap: 'wrap',
-    margin: 0,
+    justifyContent: 'center',
   },
   btnPrimary: {
     backgroundColor: '#1E3A8A',
     color: 'white',
-    padding: '16px 32px',
+    padding: '14px 28px',
     borderRadius: '8px',
     textDecoration: 'none',
     fontWeight: '600',
     transition: 'all 0.3s',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    display: 'inline-block',
-    margin: 0,
-    minWidth: '200px',
+    minWidth: '180px',
     textAlign: 'center',
   },
   btnSecondary: {
     backgroundColor: 'white',
     color: '#1E3A8A',
-    padding: '16px 32px',
+    padding: '14px 28px',
     borderRadius: '8px',
     textDecoration: 'none',
     fontWeight: '600',
     border: '2px solid #1E3A8A',
     transition: 'all 0.3s',
-    display: 'inline-block',
-    margin: 0,
-    minWidth: '200px',
+    minWidth: '180px',
     textAlign: 'center',
   },
   heroImage: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '100%',
-    margin: 0,
   },
   bowlImage: {
     width: '100%',
-    maxWidth: '650px',
+    maxWidth: '550px',
     height: 'auto',
-    objectFit: 'contain',
   },
   badges: {
-    marginTop: '60px',
-    width: '100%',
+    marginTop: '50px',
   },
   badgesGrid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
     gap: '20px',
     textAlign: 'center',
-    width: '100%',
-    margin: 0,
   },
   badge: {
-    backgroundColor: '#e6a942ff',
-    padding: '20px',
+    backgroundColor: '#E6A942',
+    padding: '18px',
     borderRadius: '12px',
     boxShadow: '0 4px 12px rgba(245, 158, 11, 0.3)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: '10px',
+    gap: '8px',
     fontWeight: '600',
     color: 'white',
-    margin: 0,
   },
   badgeIcon: {
     color: 'white',
-    fontSize: '1.5rem',
+    fontSize: '1.4rem',
     fontWeight: 'bold',
+  },
+
+  // ---- MEDIA QUERIES ----
+  '@media (max-width: 1024px)': {
+    heroContainer: {
+      gridTemplateColumns: '1fr',
+      textAlign: 'center',
+    },
+    heroDescription: {
+      fontSize: '1.1rem',
+    },
+    logoImage: {
+      maxWidth: '420px',
+    },
+  },
+  '@media (max-width: 768px)': {
+    hero: {
+      paddingTop: '60px',
+      paddingBottom: '40px',
+    },
+    heroContainer: {
+      gridTemplateColumns: '1fr',
+      gap: '20px',
+    },
+    heroButtons: {
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '12px',
+    },
+    btnPrimary: {
+      width: '80%',
+    },
+    btnSecondary: {
+      width: '80%',
+    },
+    bowlImage: {
+      maxWidth: '400px',
+    },
+  },
+  '@media (max-width: 480px)': {
+    logoImage: {
+      maxWidth: '320px',
+    },
+    heroDescription: {
+      fontSize: '1rem',
+      lineHeight: '1.6',
+    },
+    badge: {
+      fontSize: '0.9rem',
+      padding: '14px',
+    },
   },
 };
 

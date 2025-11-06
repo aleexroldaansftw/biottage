@@ -45,6 +45,43 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      {/* 💡 Estilos responsivos con media queries */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            #sobre .grid {
+              grid-template-columns: 1fr;
+            }
+            #sobre h2 {
+              font-size: 2rem !important;
+              color: #1E3A8A !important;
+            }
+            #sobre p, 
+            #sobre h3, 
+            #sobre h4 {
+              color: white !important;
+            }
+            #sobre .valuesGrid {
+              grid-template-columns: 1fr 1fr !important;
+            }
+          }
+
+          @media (max-width: 480px) {
+            #sobre .valuesGrid {
+              grid-template-columns: 1fr !important;
+            }
+            #sobre h2 {
+              font-size: 1.8rem !important;
+            }
+            #sobre p, 
+            #sobre h3, 
+            #sobre h4 {
+              color: white !important;
+            }
+          }
+        `}
+      </style>
     </section>
   );
 };
@@ -93,16 +130,5 @@ const styles = {
   valueName: { fontSize: "1.2rem", fontWeight: "600" },
   valueText: { fontSize: "0.95rem", lineHeight: "1.6" },
 };
-
-// 📱 Responsive
-if (window.innerWidth <= 768) {
-  styles.content.gridTemplateColumns = "1fr";
-  styles.valuesGrid.gridTemplateColumns = "1fr 1fr";
-  styles.card.padding = "30px";
-}
-if (window.innerWidth <= 480) {
-  styles.valuesGrid.gridTemplateColumns = "1fr";
-  styles.title.fontSize = "2rem";
-}
 
 export default About;
