@@ -14,7 +14,6 @@ const Product = () => {
               digestiva e inmunológica.
             </p>
           </div>
-
           <div style={styles.imageContainer}>
             <img src={empaque} alt="Biottage" style={styles.productImage} />
           </div>
@@ -62,23 +61,27 @@ const styles = {
   productName: {
     fontSize: "2.5rem",
     fontWeight: "700",
-    color: "#0b3b8c",
+    color: "#1e3a8a",
     marginBottom: "15px",
   },
   productDescription: {
     fontSize: "1.1rem",
-    color: "#333",
+    color: "#1e3a8a",
     lineHeight: "1.6",
   },
   features: { textAlign: "left" },
   featuresTitle: {
     fontSize: "1.4rem",
     fontWeight: "700",
-    color: "#0b3b8c",
+    color: "#1e3a8a",
     marginBottom: "15px",
   },
   featuresList: { listStyle: "none", padding: 0, margin: 0 },
-  featureItem: { fontSize: "1.05rem", color: "#444", marginBottom: "8px" },
+  featureItem: { 
+    fontSize: "1.05rem", 
+    color: "#1e3a8a", 
+    marginBottom: "8px" 
+  },
   imageContainer: { textAlign: "center" },
   productImage: {
     width: "95%",
@@ -94,10 +97,14 @@ const styles = {
   usesTitle: {
     fontSize: "1.3rem",
     fontWeight: "700",
-    color: "#0b3b8c",
+    color: "#1e3a8a",
     marginBottom: "10px",
   },
-  usesText: { fontSize: "1.05rem", color: "#333", lineHeight: "1.6" },
+  usesText: { 
+    fontSize: "1.05rem", 
+    color: "#1e3a8a", 
+    lineHeight: "1.6" 
+  },
 };
 
 // 📱 Responsive

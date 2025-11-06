@@ -122,7 +122,7 @@ const styles = {
   section: { padding: "80px 0", backgroundColor: "#ffffff" },
   header: { textAlign: "center", marginBottom: "36px" },
   title: { fontSize: "2.5rem", color: "#1E3A8A", margin: 0 },
-  subtitle: { fontSize: "1.05rem", color: "#64748b", maxWidth: "700px", margin: "12px auto 0" },
+  subtitle: { fontSize: "1.05rem", color: "#2b4b77ff", maxWidth: "700px", margin: "12px auto 0" },
   content: { marginBottom: "40px" },
   card: {
     backgroundColor: "#2953ad",

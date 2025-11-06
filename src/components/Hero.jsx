@@ -95,7 +95,7 @@ const styles = {
   },
   heroContainer: {
     display: 'grid',
-    gridTemplateColumns: '1.1fr 0.9fr',
+    gridTemplateColumns: '0.9fr 1.1fr',
     gap: '40px',
     alignItems: 'center',
     width: '100%',
@@ -125,7 +125,7 @@ const styles = {
   },
   heroDescription: {
     fontSize: '1.2rem',
-    color: '#64748b',
+    color: '#1e3a8a',
     lineHeight: '1.8',
     marginBottom: '32px',
     marginTop: 0,
@@ -175,7 +175,7 @@ const styles = {
   },
   bowlImage: {
     width: '100%',
-    maxWidth: '650px',
+    maxWidth: '850px',
     height: 'auto',
     objectFit: 'contain',
   },

@@ -71,7 +71,7 @@ const Benefits = () => {
             return (
               <div key={i} style={styles.benefitCard}>
                 <div style={styles.cardIcon}>
-                  <Icon size={48} color="#1E3A8A" strokeWidth={2} />
+                  <Icon size={48} color="white" strokeWidth={2} />
                 </div>
                 <h4 style={styles.cardTitle}>{benefit.title}</h4>
                 <p style={styles.cardText}>{benefit.text}</p>
@@ -88,7 +88,7 @@ const Benefits = () => {
               return (
                 <div key={i} style={styles.applicationCard}>
                   <div style={styles.appIcon}>
-                    <Icon size={40} color="#F59E0B" strokeWidth={2} />
+                    <Icon size={40} color="white" strokeWidth={2} />
                   </div>
                   <h4 style={styles.appTitle}>{app.title}</h4>
                   <p style={styles.appText}>{app.text}</p>
@@ -119,16 +119,17 @@ const styles = {
   },
   subtitle: { 
     fontSize: "1.2rem", 
-    color: "#64748b" 
+    color: "#07316bff" 
   },
   mainBenefit: {
     textAlign: "center",
-    backgroundColor: "#EBF4FF",
+    backgroundColor: "white",
     padding: "50px 40px",
     borderRadius: "20px",
     margin: "0 auto 60px",
     maxWidth: "900px",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.05)",
+    border: "3px solid #1E3A8A",
+    boxShadow: "0 4px 12px rgba(30, 58, 138, 0.15)",
   },
   iconLarge: { 
     display: "flex",
@@ -143,7 +144,7 @@ const styles = {
   },
   mainText: { 
     fontSize: "1.1rem", 
-    color: "#64748b", 
+    color: "#1E3A8A", 
     lineHeight: "1.8",
     maxWidth: "700px",
     margin: "0 auto"
@@ -155,11 +156,11 @@ const styles = {
     marginBottom: "60px",
   },
   benefitCard: {
-    backgroundColor: "white",
+    backgroundColor: "#f59f0bd3",
     padding: "35px 25px",
     borderRadius: "16px",
     textAlign: "center",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
+    boxShadow: "0 4px 12px rgba(245, 159, 11, 0.3)",
     transition: "transform 0.3s, box-shadow 0.3s",
   },
   cardIcon: { 
@@ -170,12 +171,12 @@ const styles = {
   cardTitle: { 
     fontSize: "1.2rem", 
     fontWeight: "700", 
-    color: "#1E3A8A",
+    color: "white",
     marginBottom: "12px"
   },
   cardText: { 
     fontSize: "0.95rem", 
-    color: "#64748b",
+    color: "white",
     lineHeight: "1.6"
   },
   applicationsSection: {
@@ -194,11 +195,12 @@ const styles = {
     gap: "30px",
   },
   applicationCard: {
-    backgroundColor: "white",
+    backgroundColor: "#2953ad",
     padding: "40px 30px",
     borderRadius: "16px",
     textAlign: "center",
-    border: "2px solid #EBF4FF",
+    border: "2px solid #2953ad",
+    boxShadow: "0 4px 12px rgba(41, 83, 173, 0.3)",
     transition: "all 0.3s",
   },
   appIcon: {
@@ -209,12 +211,12 @@ const styles = {
   appTitle: {
     fontSize: "1.3rem",
     fontWeight: "700",
-    color: "#1E3A8A",
+    color: "white",
     marginBottom: "12px",
   },
   appText: {
     fontSize: "1rem",
-    color: "#64748b",
+    color: "white",
     lineHeight: "1.6",
   },
 };

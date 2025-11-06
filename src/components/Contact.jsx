@@ -78,7 +78,7 @@ const styles = {
   },
   subtitle: {
     fontSize: "1.2rem",
-    color: "#64748b",
+    color: "#1e3a8a",
   },
   contactInfo: {
     display: "grid",
@@ -117,7 +117,7 @@ const styles = {
   },
   contactText: {
     fontSize: "1rem",
-    color: "#64748b",
+    color: "#1e3a8a",
     lineHeight: "1.6",
   },
   link: {

@@ -78,7 +78,7 @@ const styles = {
   },
   subtitle: {
     fontSize: '1.1rem',
-    color: '#64748b',
+    color: '#073980ff',
   },
   content: {
     display: 'grid',
@@ -139,7 +139,7 @@ const styles = {
   },
   addressLine: {
     fontSize: '1rem',
-    color: '#334155',
+    color: '#04367cff',
     lineHeight: '1.6',
     margin: '6px 0',
   },
