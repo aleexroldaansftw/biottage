@@ -1,5 +1,6 @@
 import biottageImg from '../assets/biottage1.png';
 import bowl1Img from '../assets/bowl1.png';
+import esloganImg from '../assets/eslogan.png'; // 👈 nueva importación
 
 const Hero = () => {
   return (
@@ -13,12 +14,20 @@ const Hero = () => {
                 alt="Biottage - Puro, vivo, tuyo" 
                 style={styles.logoImage}
               />
+              {/* 👇 Imagen del eslogan justo debajo del logo */}
+              <img 
+                src={esloganImg} 
+                alt="Eslogan Biottage" 
+                style={styles.esloganImage}
+              />
             </div>
+
             <p style={styles.heroDescription}>
               Queso cottage artesanal bajo en grasa, alto en proteína y enriquecido con 
               <strong> Lactobacillus rhamnosus</strong>, un probiótico que mejora tu salud 
               digestiva y fortalece tu bienestar.
             </p>
+
             <div style={styles.heroButtons}>
               <a href="#producto" style={styles.btnPrimary}>
                 Conoce más
@@ -59,7 +68,7 @@ const Hero = () => {
   );
 };
 
-// ---- ESTILOS RESPONSIVE ----
+// ---- ESTILOS ----
 const styles = {
   hero: {
     background: 'linear-gradient(135deg, #EBF4FF 0%, #ffffff 100%)',
@@ -95,6 +104,13 @@ const styles = {
     maxWidth: '520px',
     width: '100%',
     height: 'auto',
+    marginBottom: '12px',
+  },
+  esloganImage: {
+    maxWidth: '300px',
+    width: '100%',
+    height: 'auto',
+    marginBottom: '24px',
   },
   heroDescription: {
     fontSize: '1.2rem',
@@ -168,57 +184,6 @@ const styles = {
     color: 'white',
     fontSize: '1.4rem',
     fontWeight: 'bold',
-  },
-
-  // ---- MEDIA QUERIES ----
-  '@media (max-width: 1024px)': {
-    heroContainer: {
-      gridTemplateColumns: '1fr',
-      textAlign: 'center',
-    },
-    heroDescription: {
-      fontSize: '1.1rem',
-    },
-    logoImage: {
-      maxWidth: '420px',
-    },
-  },
-  '@media (max-width: 768px)': {
-    hero: {
-      paddingTop: '60px',
-      paddingBottom: '40px',
-    },
-    heroContainer: {
-      gridTemplateColumns: '1fr',
-      gap: '20px',
-    },
-    heroButtons: {
-      flexDirection: 'column',
-      alignItems: 'center',
-      gap: '12px',
-    },
-    btnPrimary: {
-      width: '80%',
-    },
-    btnSecondary: {
-      width: '80%',
-    },
-    bowlImage: {
-      maxWidth: '400px',
-    },
-  },
-  '@media (max-width: 480px)': {
-    logoImage: {
-      maxWidth: '320px',
-    },
-    heroDescription: {
-      fontSize: '1rem',
-      lineHeight: '1.6',
-    },
-    badge: {
-      fontSize: '0.9rem',
-      padding: '14px',
-    },
   },
 };
 
