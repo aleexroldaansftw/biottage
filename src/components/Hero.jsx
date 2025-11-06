@@ -1,13 +1,41 @@
+import { useState, useEffect } from 'react';
 import biottageImg from '../assets/biottage1.png';
 import esloganImg from '../assets/eslogan.png';
 import bowl1Img from '../assets/bowl1.png';
 import { MapPin } from 'lucide-react';
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const heroStyle = {
+    ...styles.hero,
+    paddingTop: isMobile ? '100px' : '80px',
+  };
+
+  const heroContainerStyle = {
+    ...styles.heroContainer,
+    gridTemplateColumns: isMobile ? '1fr' : '0.9fr 1.1fr',
+    gap: isMobile ? '30px' : '40px',
+  };
+
+  const badgesGridStyle = {
+    ...styles.badgesGrid,
+    gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
+  };
+
   return (
-    <section id="inicio" style={styles.hero}>
+    <section id="inicio" style={heroStyle}>
       <div style={styles.heroWrapper}>
-        <div className="hero-container" style={styles.heroContainer}>
+        <div className="hero-container" style={heroContainerStyle}>
           <div style={styles.heroContent}>
             <div style={styles.logoContainer}>
               <img 
@@ -47,7 +75,7 @@ const Hero = () => {
         </div>
         
         <div style={styles.badges}>
-          <div style={styles.badgesGrid}>
+          <div style={badgesGridStyle}>
             <div style={styles.badge}>
               <span style={styles.badgeIcon}>✓</span>
               <span>100% Natural</span>
@@ -70,7 +98,6 @@ const Hero = () => {
 const styles = {
   hero: {
     background: 'linear-gradient(135deg, #EBF4FF 0%, #ffffff 100%)',
-    paddingTop: '80px',
     paddingBottom: '60px',
     minHeight: '90vh',
     display: 'flex',
@@ -95,8 +122,6 @@ const styles = {
   },
   heroContainer: {
     display: 'grid',
-    gridTemplateColumns: '0.9fr 1.1fr',
-    gap: '40px',
     alignItems: 'center',
     width: '100%',
     margin: 0,
@@ -185,14 +210,13 @@ const styles = {
   },
   badgesGrid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
     gap: '20px',
     textAlign: 'center',
     width: '100%',
     margin: 0,
   },
   badge: {
-    backgroundColor: '#f59f0bd3',
+    backgroundColor: '#F59E0B',
     padding: '20px',
     borderRadius: '12px',
     boxShadow: '0 4px 12px rgba(245, 158, 11, 0.3)',
