@@ -85,7 +85,7 @@ const Footer = () => {
             © {currentYear} Biottage. Todos los derechos reservados.
           </p>
           <p style={styles.credits}>
-            Hecho con ❤️ en México
+            Hecho por estudiantes de Nutricón la UAEH
           </p>
         </div>
       </div>

@@ -1,9 +1,14 @@
+import { MapPin, Navigation } from 'lucide-react';
+
 const Location = () => {
   return (
     <section id="ubicacion" style={styles.section}>
       <div className="container">
         <div style={styles.header}>
-          <h2 style={styles.title}>📍 Ubicación</h2>
+          <h2 style={styles.title}>
+            <MapPin size={32} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '12px' }} />
+            Ubicación
+          </h2>
           <p style={styles.subtitle}>
             Visítanos en nuestro kiosko comercial "Biottage Stand"
           </p>
@@ -24,7 +29,7 @@ const Location = () => {
           <div style={styles.infoContainer}>
             <div style={styles.directionCard}>
               <div style={styles.iconBox}>
-                <span style={styles.pinIcon}>📍</span>
+                <MapPin size={40} color="white" />
               </div>
               <h3 style={styles.cardTitle}>Dirección</h3>
               <div style={styles.addressInfo}>
@@ -41,7 +46,8 @@ const Location = () => {
                 rel="noopener noreferrer"
                 style={styles.directionsButton}
               >
-                Cómo llegar →
+                <Navigation size={20} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} />
+                Cómo llegar
               </a>
             </div>
           </div>
@@ -66,6 +72,9 @@ const styles = {
     fontWeight: '700',
     color: '#1E3A8A',
     marginBottom: '12px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   subtitle: {
     fontSize: '1.1rem',
@@ -117,9 +126,6 @@ const styles = {
     margin: '0 auto 20px',
     boxShadow: '0 6px 20px rgba(30, 58, 138, 0.3)',
   },
-  pinIcon: {
-    fontSize: '2.5rem',
-  },
   cardTitle: {
     fontSize: '1.8rem',
     fontWeight: '700',
@@ -138,7 +144,9 @@ const styles = {
     margin: '6px 0',
   },
   directionsButton: {
-    display: 'block',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     width: '100%',
     backgroundColor: '#1E3A8A',
     color: 'white',
