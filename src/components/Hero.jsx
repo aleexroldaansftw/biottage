@@ -23,7 +23,7 @@ const Hero = () => {
 
   const heroStyle = {
     ...styles.hero,
-    paddingTop: isMobile ? '120px' : '80px',
+    paddingTop: isMobile ? '140px' : '80px',
   };
 
   const heroContainerStyle = {
