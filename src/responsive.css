@@ -1,0 +1,154 @@
+/* Responsive styles para todos los componentes */
+
+/* Navbar responsive - MEJORADO */
+@media (max-width: 968px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  
+  .mobile-button {
+    display: block !important;
+  }
+}
+
+/* Hero Section */
+@media (max-width: 968px) {
+  .hero-container {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 40px !important;
+  }
+  
+  .hero-image {
+    order: -1;
+    margin: 0 auto;
+  }
+  
+  .hero-image > div {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-container h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-container p:nth-of-type(1) {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* About Section */
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .values-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Product Section */
+@media (max-width: 968px) {
+  .product-main-content {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+  
+  .specs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .specs-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Benefits Section */
+@media (max-width: 968px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .applications-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Location Section */
+@media (max-width: 968px) {
+  .location-content {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .map-container {
+    height: 400px !important;
+  }
+}
+
+/* Contact Section */
+@media (max-width: 968px) {
+  .contact-info {
+    grid-template-columns: 1fr !important;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Footer */
+@media (max-width: 968px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+  
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+}
+
+/* General responsive adjustments */
+@media (max-width: 600px) {
+  section {
+    padding: 50px 0 !important;
+  }
+  
+  .container {
+    padding: 0 15px !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
