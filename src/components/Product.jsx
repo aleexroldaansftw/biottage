@@ -4,9 +4,7 @@ const Product = () => {
   return (
     <section id="producto" style={styles.section}>
       <div style={styles.container}>
-        {/* COLUMNA IZQUIERDA */}
         <div style={styles.leftColumn}>
-          {/* Nombre y descripción (antes estaba en la derecha) */}
           <div style={styles.infoContainer}>
             <h3 style={styles.productName}>Biottage</h3>
             <p style={styles.productDescription}>
@@ -17,15 +15,12 @@ const Product = () => {
             </p>
           </div>
 
-          {/* Imagen del producto */}
           <div style={styles.imageContainer}>
             <img src={empaque} alt="Biottage" style={styles.productImage} />
           </div>
         </div>
 
-        {/* COLUMNA DERECHA */}
         <div style={styles.rightColumn}>
-          {/* Beneficios Principales (antes estaba en la izquierda) */}
           <div style={styles.features}>
             <h4 style={styles.featuresTitle}>Beneficios Principales:</h4>
             <ul style={styles.featuresList}>
@@ -37,7 +32,6 @@ const Product = () => {
             </ul>
           </div>
 
-          {/* Usos y Aplicaciones */}
           <div style={styles.usesContainer}>
             <h4 style={styles.usesTitle}>Usos y Aplicaciones:</h4>
             <p style={styles.usesText}>
@@ -52,10 +46,7 @@ const Product = () => {
 };
 
 const styles = {
-  section: {
-    padding: "60px 0",
-    backgroundColor: "#f7faff",
-  },
+  section: { padding: "60px 0", backgroundColor: "#f7faff" },
   container: {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
@@ -65,19 +56,9 @@ const styles = {
     margin: "0 auto",
     padding: "0 20px",
   },
-  leftColumn: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "40px",
-  },
-  rightColumn: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "40px",
-  },
-  infoContainer: {
-    textAlign: "left",
-  },
+  leftColumn: { display: "flex", flexDirection: "column", gap: "40px" },
+  rightColumn: { display: "flex", flexDirection: "column", gap: "40px" },
+  infoContainer: { textAlign: "left" },
   productName: {
     fontSize: "2.5rem",
     fontWeight: "700",
@@ -89,28 +70,16 @@ const styles = {
     color: "#333",
     lineHeight: "1.6",
   },
-  features: {
-    textAlign: "left",
-  },
+  features: { textAlign: "left" },
   featuresTitle: {
     fontSize: "1.4rem",
     fontWeight: "700",
     color: "#0b3b8c",
     marginBottom: "15px",
   },
-  featuresList: {
-    listStyle: "none",
-    padding: 0,
-    margin: 0,
-  },
-  featureItem: {
-    fontSize: "1.05rem",
-    color: "#444",
-    marginBottom: "8px",
-  },
-  imageContainer: {
-    textAlign: "center",
-  },
+  featuresList: { listStyle: "none", padding: 0, margin: 0 },
+  featureItem: { fontSize: "1.05rem", color: "#444", marginBottom: "8px" },
+  imageContainer: { textAlign: "center" },
   productImage: {
     width: "95%",
     maxWidth: "550px",
@@ -128,11 +97,18 @@ const styles = {
     color: "#0b3b8c",
     marginBottom: "10px",
   },
-  usesText: {
-    fontSize: "1.05rem",
-    color: "#333",
-    lineHeight: "1.6",
-  },
+  usesText: { fontSize: "1.05rem", color: "#333", lineHeight: "1.6" },
 };
+
+// 📱 Responsive
+if (window.innerWidth <= 768) {
+  styles.container.gridTemplateColumns = "1fr";
+  styles.container.gap = "25px";
+  styles.productName.fontSize = "2rem";
+  styles.productDescription.fontSize = "1rem";
+  styles.usesContainer.padding = "20px";
+  styles.featuresTitle.fontSize = "1.2rem";
+  styles.featureItem.fontSize = "0.95rem";
+}
 
 export default Product;
